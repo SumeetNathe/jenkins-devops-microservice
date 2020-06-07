@@ -10,10 +10,38 @@
 // 		echo "Integration Test"
 // 	}
 // }
-//2-->SCRIPTED SYNTAX---OLD ONE
-node {
+//2-->SCRIPTED SYNTAX---OLD ONE--above ones are the same as this one 
+//but it wont be as blue boxes as prevoiusly were
+
+// node {
 	
-		echo "Build"
-		echo "Test"
-		echo "Integration Test"
+// 		echo "Build"
+// 		echo "Test"
+// 		echo "Integration Test"
+// }
+
+
+//Declarative approach
+
+pipeline {
+	agent any
+	stages{
+		stage('Build'){
+			steps{
+				echo "Build"
+			}
+		}
+
+		stage('Test'){
+			steps{
+				echo "Test"
+			}
+		}
+
+		stage('Integration Test'){
+			steps{
+				echo "Integration Test"
+			}
+		}
+	}
 }
