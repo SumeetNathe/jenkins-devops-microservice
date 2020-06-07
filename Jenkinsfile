@@ -54,5 +54,6 @@ pipeline {
 		failure{
 			echo "I am failed.. I run when you fail!"
 		}
+		//other than above there are other post activity like unstable and changed.
 	}
 }
